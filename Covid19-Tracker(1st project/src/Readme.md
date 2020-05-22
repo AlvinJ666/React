@@ -5,5 +5,4 @@
 ![](screenshots/global.png)
 
 #Select a country's status in the list to view the data in Bar-chart format
-Select example
 ![](screenshots/canada.png)
