@@ -40,7 +40,7 @@ const Chart=({data:{confirmed, deaths,recovered,}, country})=>{
                             labels: dailyData.map(({date})=>date),
                     datasets:[{
                         data: dailyData.map(({confirmed})=>confirmed),
-                        label:'Infected',
+                        label:'Comfirmed',
                         borderColor:'rgb(150,115,189)',
                         fill: true,
                     },
@@ -50,7 +50,16 @@ const Chart=({data:{confirmed, deaths,recovered,}, country})=>{
                         borderColor:'red',
                         backgroundColor: 'rgba(179,106,106,0.816)',
                         fill: true,
-                    }],
+                    },
+
+                    // {
+                    //     data: dailyData.map(({confirmed})=>confirmed)-dailyData.map(({deaths})=>deaths),
+                    //     label:'Infected',
+                    //     borderColor:'pink',
+                    //     backgroundColor: 'rgba(194, 13, 191, 0.816)',
+                    //     fill: true,
+                    // }
+                ],
                 }}/>
             )
         }
@@ -60,11 +69,11 @@ const Chart=({data:{confirmed, deaths,recovered,}, country})=>{
             return null;
             return (<Bar
                 data={{
-                    labels:['Infected','Recovered','Deaths'],
+                    labels:['Infected','Recovered','Deaths','Current'],
                     datasets:[{
                         label: 'Peoble',
-                        backgroundColor: ['rgb(150,115,189)','rgb(124,187,127)','rgba(179,106,106,0.816)'],
-                        data:[confirmed.value,recovered.value,deaths.value]
+                        backgroundColor: ['rgb(150,115,189)','rgb(124,187,127)','rgba(179,106,106,0.816)','rgba(194, 13, 191, 0.816)'],
+                        data:[confirmed.value,recovered.value,deaths.value,confirmed.value-recovered.value-deaths.value]
                     }]
                 }}
                 options={{
