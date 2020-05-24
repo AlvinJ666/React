@@ -4,18 +4,25 @@
     margin: 50px 0;
 }
 .card{
-
+    
     margin:0 2% !important;
 }
 
 .Infected{
+    margin-top: 10px;
     border-bottom: 10px solid rgb(150, 115, 189);
 }
 
 .Recovered{
+    margin-top: 10px;
     border-bottom: 10px solid rgb(124, 187, 127);
 }
 
 .Deaths{
+    margin-top: 10px;
     border-bottom: 10px solid rgba(179, 106, 106, 0.816);
+}
+.Current{
+    margin-top: 10px;
+    border-bottom: 10px solid rgba(194, 13, 191, 0.816);
 }
